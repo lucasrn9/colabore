@@ -3,7 +3,6 @@ import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import Header from '../../components/header/Header';
 import AddGroup from '../../components/addGroup/AddGroup';
 
-// todo: commit to git and github
 function Home() {
   return (
     <View style={styles.container}>
