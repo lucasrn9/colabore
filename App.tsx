@@ -1,8 +1,9 @@
 import React from 'react';
 import Home from './screens/home/Home';
+import CreateGroup from './screens/createGroup/CreateGroup';
 
 function App() {
-  return <Home />;
+  return <CreateGroup />;
 }
 
 export default App;
