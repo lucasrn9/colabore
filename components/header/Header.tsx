@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: 15,
     paddingVertical: 12,
+    marginBottom: 35,
   },
   logo: {
     fontFamily: 'Inter_24pt-SemiBold',
