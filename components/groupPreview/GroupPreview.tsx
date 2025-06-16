@@ -30,9 +30,12 @@ function GroupPreview({
 }: GroupPreviewProps) {
   const [dataContainerWidth, setDataContainerWidth] = React.useState(0);
   return (
-    <Pressable {...rest} style={[styles.container, style]}>
+    <Pressable
+      {...rest}
+      style={[styles.container, style]}
+      accessibilityLabel="Group Preview">
       <ImagePreview>
-        <Image source={photo} />
+        <Image source={photo} accessibilityLabel="Group image preview" />
       </ImagePreview>
       <View
         style={styles.dataContainer}
