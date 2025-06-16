@@ -30,11 +30,14 @@ const GroupsView = ({groups, style, ...rest}: GroupsViewProps) => {
       date={group.lastActivityDate}
       photo={group.photo}
       accessibilityLabel="Group Preview"
-      accessibilityHint={`A preview of the group ${group.name}`}
+      accessibilityHint={`Open the group ${group.name}`}
     />
   ));
   return (
-    <ScrollView {...rest} contentContainerStyle={[styles.scrollView, style]}>
+    <ScrollView
+      {...rest}
+      contentContainerStyle={[styles.scrollView, style]}
+      accessibilityLabel="A list of all your groups">
       {hasGroups ? groupsElements : null}
     </ScrollView>
   );

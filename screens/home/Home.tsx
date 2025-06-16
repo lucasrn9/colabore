@@ -29,8 +29,6 @@ function Home() {
   );
 }
 
-// todo: tests, and commit
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
