@@ -3,7 +3,11 @@ import Home from './screens/home/Home';
 import CreateGroup from './screens/createGroup/CreateGroup';
 
 function App() {
+<<<<<<< HEAD
   return <CreateGroup />;
+=======
+  return <Home />;
+>>>>>>> dev
 }
 
 export default App;
