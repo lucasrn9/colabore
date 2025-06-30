@@ -3,7 +3,7 @@
 **Colabore** is an open-source mobile application for **collaborative tasks**.  
 It works like WhatsApp groups, but with built-in tools for **assigning tasks and roles**, making it simple and intuitive to organize people around shared activities.
 
-It’s perfect for routine chores, small projects, or school and college work. The main goal is to be **complete but not complex** — so anyone with basic tech skills can use it without friction.
+It’s perfect for routine chores, small projects, or school and college work. The main goal is to be **complete but not complex**, so anyone with basic tech skills can use it without friction.
 
 Colabore is **not** designed for large agile frameworks or enterprise-level methodologies, but it offers much more structure than a simple chat group or to-do list. It includes a wide variety of task templates, with customizable frequencies and delivery options.
 
