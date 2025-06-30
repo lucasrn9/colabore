@@ -1,9 +1,10 @@
 import React from 'react';
 import Home from './screens/home/Home';
 import CreateGroup from './screens/createGroup/CreateGroup';
+import GroupEvents from './screens/groupEvents/GroupEvents';
 
 function App() {
-  return <Home />;
+  return <GroupEvents />;
 }
 
 export default App;
