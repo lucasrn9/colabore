@@ -1,12 +1,25 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  ImageSourcePropType,
+  ViewStyle,
+  StyleProp,
+} from 'react-native';
 import GroupHeaderPhoto from '../groupHeaderPhoto/GroupHeaderPhoto';
 
-function GroupHeader() {
+interface GroupHeaderProps {
+  groupName: string;
+  groupPhoto?: ImageSourcePropType;
+  style?: StyleProp<ViewStyle>;
+}
+
+function GroupHeader({groupPhoto, groupName}: GroupHeaderProps) {
   return (
-    <View style={styles.container}>
-      <GroupHeaderPhoto />
-      <Text style={styles.groupName}>Group Name</Text>
+    <View style={styles.container} accessibilityHint="Group Header">
+      <GroupHeaderPhoto imageSource={groupPhoto} />
+      <Text style={styles.groupName}>{groupName}</Text>
     </View>
   );
 }
