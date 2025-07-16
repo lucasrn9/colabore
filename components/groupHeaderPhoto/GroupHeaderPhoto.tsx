@@ -23,9 +23,17 @@ function GroupHeaderPhoto({
   return (
     <View {...rest} style={[styles.container, style]}>
       {imageSource ? (
-        <Image source={imageSource} style={styles.image} />
+        <Image
+          source={imageSource}
+          style={styles.image}
+          accessibilityLabel="Group Header Image"
+        />
       ) : (
-        <PeopleSvg width={26} height={29} />
+        <PeopleSvg
+          width={26}
+          height={29}
+          accessibilityLabel="Group Header Default Image"
+        />
       )}
     </View>
   );

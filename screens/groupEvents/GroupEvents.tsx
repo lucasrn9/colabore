@@ -5,7 +5,7 @@ import GroupHeader from '../../components/groupHeader/GroupHeader';
 function GroupEvents() {
   return (
     <View>
-      <GroupHeader />
+      <GroupHeader groupName="Group Name" />
     </View>
   );
 }
