@@ -1,11 +1,33 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {
+  Image,
+  ImageSourcePropType,
+  StyleSheet,
+  View,
+  ViewProps,
+} from 'react-native';
 import UserIcon from '../../assets/images/User-Icon.svg';
 
-function UserPhoto() {
+interface UserPhotoProps extends ViewProps {
+  photo?: ImageSourcePropType | undefined;
+}
+
+function UserPhoto({photo, ...rest}: UserPhotoProps) {
   return (
-    <View style={[styles.container]}>
-      <UserIcon width={31} height={31} />
+    <View {...rest} style={[styles.container]}>
+      {photo ? (
+        <Image
+          source={photo}
+          style={styles.image}
+          accessibilityLabel="user photo"
+        />
+      ) : (
+        <UserIcon
+          width={31}
+          height={31}
+          accessibilityLabel="user default photo"
+        />
+      )}
     </View>
   );
 }
@@ -19,6 +41,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  image: {width: 41, height: 41, borderRadius: 50},
 });
 
 export default UserPhoto;
