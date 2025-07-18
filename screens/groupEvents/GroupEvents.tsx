@@ -1,15 +1,17 @@
 import React from 'react';
 import {View} from 'react-native';
 import GroupHeader from '../../components/groupHeader/GroupHeader';
-import UserPhoto from '../../components/userPhoto/UserPhoto';
-import BubbleSpeech from '../../components/bubbleSpeech/BubbleSpeech';
+import GroupEvent from '../../components/groupEvent/GroupEvent';
 
 function GroupEvents() {
   return (
     <View>
       <GroupHeader groupName="Group Name" />
-      <UserPhoto />
-      <BubbleSpeech />
+      <GroupEvent
+        username="Memphis Depay"
+        email="memphis@colabore.com"
+        event="Finished the Task: Task Name"
+      />
     </View>
   );
 }

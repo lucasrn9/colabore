@@ -1,26 +1,57 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {StyleProp, StyleSheet, View, ViewProps, ViewStyle} from 'react-native';
 import Polygon from '../../assets/shapes/polygon.svg';
-function BubbleSpeech() {
+
+interface BubbleSpeechProps extends ViewProps {
+  style?: StyleProp<ViewStyle>;
+  containerMargins?: {
+    marginLeft?: number;
+    marginRight?: number;
+    marginTop?: number;
+    marginBottom?: number;
+  };
+}
+
+function BubbleSpeech({
+  style,
+  children,
+  containerMargins,
+  ...rest
+}: BubbleSpeechProps) {
+  const flatStyle = StyleSheet.flatten(style);
   return (
-    <View style={[styles.container]}>
-      <Polygon style={styles.polygon} />
-      <View style={[styles.bubble]} />
+    <View
+      {...rest}
+      style={[styles.container, containerMargins]}
+      accessibilityLabel="bubble-speech-container">
+      <Polygon
+        fill={
+          flatStyle?.backgroundColor
+            ? flatStyle.backgroundColor
+            : styles.bubble.backgroundColor
+        }
+        style={[styles.polygon]}
+        accessibilityLabel="bubble-speech-polygon"
+      />
+      <View
+        style={[styles.bubble, style]}
+        accessibilityLabel="bubble-speech-bubble">
+        {children}
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {marginLeft: 20, flexDirection: 'row'},
+  container: {flexDirection: 'row'},
   bubble: {
     width: 232,
-    height: 110 /*REMOVE AFTER FINISHED*/,
     backgroundColor: '#D9D9D9',
     borderRadius: 8,
-    paddingHorizontal: 10,
-    paddingVertical: 13,
+    paddingHorizontal: 13,
+    paddingVertical: 10,
   },
-  polygon: {position: 'relative', left: 3},
+  polygon: {position: 'relative', left: 4},
 });
 
 export default BubbleSpeech;
